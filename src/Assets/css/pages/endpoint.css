@@ -1,0 +1,45 @@
+.user-list{
+	margin-top:45px;
+	margin-bottom:45px;
+}
+.user-list table{
+	font-size: 1.5rem;
+}
+.user-list .card{
+	padding:25px;
+	text-align:left;
+}
+.user-details{
+	margin-top:45px;
+	margin-bottom:45px;
+	display: none;
+}
+.user-details h1,h2,h3,h4,h5,h6{
+	margin: 1rem auto 1rem !important;
+}
+.user-details hr {
+	margin: 2rem auto;
+}
+.user-details ul {
+	margin: 0rem;
+}
+.user-details label{
+	font-weight:bold;
+}
+.user-details .card{
+	padding:25px;
+}
+.user-details .tab-pane{
+	padding-top:15px;
+}
+.user-details .btn{
+	padding: 1.1em 1.44em;
+}
+.user-error{
+	margin-top:45px;
+	margin-bottom:45px;
+	display:none;
+}
+.user-error .btn{
+	padding: 1.1em 1.44em;
+}

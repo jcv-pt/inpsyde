@@ -1,0 +1,20 @@
+{
+    "name": "jcv-pt/inpsyde",
+    "description": "Recruiting test package for inpsyde",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Joao Vieira",
+            "email": "info@joao-vieira.pt"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0",
+		"nategood/httpful": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Inpsyde\\": "src/"
+        }
+    }
+}
