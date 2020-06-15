@@ -19,11 +19,12 @@ The Wordpress plugin enables a frontend async user list, while consuming an exte
 
 - PHP 7.0 and later.
 - PHPUnit
+- Composer
 
 ## Dependencies
 
 - Httpful (https://github.com/nategood/httpful)
--- (Required to ease json API interation)  
+-- Required to ease json API interation
 
 ## Installation
 
@@ -33,15 +34,23 @@ As requested, the plugin requires no aditional process besides git cloning and c
 
 > "At Inpsyde, we use Composer to manage the whole website code. We use it to install WordPress itself, alongside all plugins and themes, and we load Composer autoload in wp-config.php. We will appreciate it if the delivered plugin will be compliant with this workflow."
 
-While on wordpress directory:
+As this is not registed on packagegist, while on wordpress directory, simply add the github repository to the main "composer.json" file as below: 
 
-```sh
-$ cd wp-content/plugins
-$ git clone https://github.com/jcv-pt/inpsyde.git
-$ cd inpsyde
-$ composer install
+```json
+{    ...
+    "repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/jcv-pt/inpsyde"
+		}
+	],
+}
 ```
-
+Run composer
+```sh
+$ composer require "jcv-pt/inpsyde"
+```
+Plugin should now be made available on the backend plugin list.
 ## Activation
 
 Activation is done under the wordpress plugin manager, simply access the url (.../wp-admin/plugins.php) and activate the "Inpsyde" plugin
@@ -174,7 +183,7 @@ Unit test were made available:
 Simply run phpunit inside the plugin dir.
 
 ```sh
-$ cd wpcontent/plugins/inpsyde
+$ cd wp-content/plugins/inpsyde
 $ phpunit
 ```
 
