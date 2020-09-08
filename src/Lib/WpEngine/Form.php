@@ -190,7 +190,7 @@ class Form
      * @param  string $path Dotted file path
      * @param  string $sepator Separator char
      * @method dotToPath
-	 * @return string
+     * @return string
      */
     private function dotToPath(String $path, String $separator = '.') : string
     {
@@ -211,7 +211,7 @@ class Form
      * Gets field stored value
      * @param  string $name Filed name
      * @method getValue
-	 * @return string
+     * @return string
      */
     private function getValue(String $name) : string
     {

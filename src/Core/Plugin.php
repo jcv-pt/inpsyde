@@ -38,7 +38,7 @@ class Plugin extends Bootstrap
      * Intializes child pages and registers Jquery & Bootstrap libs
      *
      * @method run
-	 * @return Bool
+     * @return Bool
      */
     public function run() : bool
     {
@@ -80,7 +80,7 @@ class Plugin extends Bootstrap
     /**
      * Performs plugin activation and populates default settings in case they dont exist
      * @method activate
-	 * @return Bool
+     * @return Bool
      */
     public function activate() : bool
     {
@@ -103,7 +103,7 @@ class Plugin extends Bootstrap
     /**
      * Performs uninstall of the plugin, removing all the settings defined
      * @method deactivate
-	 * @return Bool
+     * @return Bool
      */
     public static function uninstall() : bool
     {
