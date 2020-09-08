@@ -3,7 +3,7 @@
 ![image](https://drive.google.com/uc?export=view&id=1n1yLUMIKBJDZ7n5sN5wzbbOim2w3-9WF)
 
 ![Build Status](https://badgen.net/badge/build/passing/green)
-![Build Status](https://badgen.net/badge/version/1.0/blue)
+![Build Status](https://badgen.net/badge/version/2.0/blue)
 ![License](https://badgen.net/badge/license/MIT/blue)
 
 [![Email](https://badgen.net/badge/email/info@joao-vieira.pt/black)](mailto:info@joao-vieira.pt)
@@ -178,13 +178,23 @@ Plugin was developed using as much of translations (i18n) functions as possible.
 # Tests
 Unit test were made available:
 
-![image](https://drive.google.com/uc?export=view&id=12H-0g21PpbUzZn-eaZj-XFeQ8xHcsNpw)
+![image](https://drive.google.com/uc?export=view&id=1MlYza5xYlj4n1qrp2SU-sk1HAzLM30cW)
 
 Simply run phpunit inside the plugin dir.
 
 ```sh
 $ cd wp-content/plugins/inpsyde
 $ phpunit
+```
+
+PHPCS test were performed:
+
+![image](https://drive.google.com/uc?export=view&id=1i4WFmUpF5b0PLZgrJsuIzOsrtJMSffOa)
+
+Simply run PHPCS inside the wordpress dir.
+
+```sh
+$ ./vendor/bin/phpcs --standard=Inpsyde /var/www/clients/client1/web15/web/wp-content/plugins/inpsyde/src
 ```
 
 # Checklist
@@ -200,7 +210,7 @@ Please see below:
 | 2 | A table with users’ details is visible when visiting the endpoint | OK |
 | 3 | Clicking a user name/username/id in the table loads that user details via AJAX and print them in the page | OK |
 | 4 | Unit tests are available and it is possible to run them and all pass with no errors | OK |
-| 5 | PHPCS checks pass with no errors/warnings (you can exclude tests files from check if you wish) | MISSING |
+| 5 | PHPCS checks pass with no errors/warnings (you can exclude tests files from check if you wish) | OK |
 | 6 | the README is complete with: writing in Markdown format, list of requirements, installation and usage instructions, explanations behind non-obvious implementation choices | OK |
 | 7 | Your composer.json is valid and complete, and running composer install makes the plugin ready to be used. | OK |
 | 8 | The work has a license. | OK |
@@ -208,12 +218,9 @@ Please see below:
 | 10 | The latest version of all the code has been committed to GitHub in a private repository | OK |
 | 11 | The user jobs@inpsyde.com has read access to the repository | OK |
 
-## Notes
-
-Unfortunently point #5 was not met, the PHPCS check and code compliance reference was only provided in the checklist requirements, by the time ive realize this, my plugin was already fully codded, ive still tried to evalute the code but the time required to emend the scripts to be fully compliant was fairly long. So hopefuly the evaluator considers the amount of work and effort on developing this plugin and appeal to his / hers best compreension whist hoping that this exercise / test is enought to demonstrate my coding and problem solving skills as i believe that programming acordingly to PHPCS or any other design pattern rules and specs can be easily achieved.
-
 # Abouts
-As final consideration please note that this plugin development and architecture was designed in mind of recreating the essence of the MVC model, however, i do realise that some of the wordpress plugins follow their own wordpress plugin architecture and that PHPCS has strict code standards to make sure plugins follow its rules, so in future i have absolutely no problem of developing a plugin that follows those patterns.
+As final consideration please note that this plugin development and architecture was built without recurring to any external plugins or libs, i do understand that, likely, yourlseves will use libraries or components that can speed development time wihtout the need to be "re-creating the wheel" on every plugin developed. 
+In adition i also realise that some of the wordpress plugins follow their own wordpress plugin architecture and that PHPCS implements strict code standards to make sure plugins comply with the company rules, so in future i have absolutely no problem of developing a plugin that follows whatever patterns / architecture yourselves find fit.
 
 Should the evaluator have any questions about this plugin or any information contained in this document please feel free to contact me via email to info@joao-vieira.pt or via skype JCV.pt. Thank you.
 
