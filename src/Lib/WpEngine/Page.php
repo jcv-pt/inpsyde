@@ -1,10 +1,8 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Inpsyde\Lib\WpEngine;
-
-// Block direct access to file
-
-defined('ABSPATH') or die('Not Authorized!');
 
 use Inpsyde\Lib\WpEngine\Bootstrap;
 
@@ -14,96 +12,98 @@ use Inpsyde\Lib\WpEngine\Bootstrap;
  * @author João Vieira
  * @license MIT
  */
-class Page{
-	
-	protected $Plugin = null;
-	
-	private $run_hook = 'parse_query';
-	
-	/**
+class Page
+{
+    
+    protected $plugin = null;
+    
+    private $runHook = 'parse_query';
+    
+    /**
      * Initializes a new page and assigns the main plugin class
-	 * @param  Bootstrap $plugin Plugin main class
+     * @param  Bootstrap $plugin Plugin main class
      * @method __construct
      */
-	public function __construct(Bootstrap &$plugin) {
-		
-		//Set bootstrap
-		
-		$this->Plugin = $plugin;
-		
-		//Initializes
-		
-		$this->initialize();
-
+    public function __construct(Bootstrap &$plugin)
+    {
+        //Set bootstrap
+        
+        $this->plugin = $plugin;
+        
+        //Initializes
+        
+        $this->initialize();
     }
-	
-	/**
+    
+    /**
      * Initializes the plugin and registers hooks
      * @method initialize
+     * @return bool
      */
-	public function initialize(){
-		
-		//Register
-		
-		$this->register();
-		
-	}
-	
-	/**
+    public function initialize() : bool
+    {
+        //Register
+        
+        $this->register();
+        
+        return true;
+    }
+    
+    /**
      * Runs page
      * @method run
-	 * @return bool
+     * @return bool
      */
-	public function run(){
-		
-		return true;
-		
-	}
-	
+    public function run() : bool
+    {
+        return true;
+    }
+    
     /**
      * Registers actions
      * @method register
-	 * @return bool
+     * @return bool
      */
-	public function register(){
-		
-		//Register the run method
-		
-		$this->registerAction($this->run_hook,'run');
-		
-		return true;
-		
-	}
-	
-	/**
+    public function register() : bool
+    {
+        //Register the run method
+        
+        $this->registerAction($this->runHook, 'run');
+        
+        return true;
+    }
+    
+    /**
      * Renders view
      * @method render
-	 * @return bool
+     * @return bool
      */
-	public function render(){
-		
-		return true;
-		
-	}
-	
-	/**
+    public function render() : bool
+    {
+        return true;
+    }
+    
+    /**
      * Register Action
      * @method registerAction
+     * @return bool
      */
-    public function registerAction(String $name, String $method) {
-		
-		add_action($name,[$this, $method]);
-		
+    public function registerAction(String $name, String $method) : bool
+    {
+        add_action($name, [$this, $method]);
+        
+        return true;
     }
-	
-	/**
+    
+    /**
      * Register Filter
      * @method registerAction
+     * @return bool
      */
-    public function registerFilter(String $name, String $method) {
-		
-		add_filter($name,[$this, $method]);
-		
+    public function registerFilter(String $name, String $method) : bool
+    {
+        add_filter($name, [$this, $method]);
+        
+        return true;
     }
-
 }
