@@ -26,7 +26,7 @@ class TemplateTest extends TestCase{
 			if(!file_exists(dirname($this->testFile)))
 				mkdir(dirname($this->testFile), 0777, true);
 			
-			file_put_contents($this->testFile,'<?= (isset($content) ? $content : "");?>ok');
+			file_put_contents($this->testFile,'ok');
 		
 		}
 		
@@ -35,28 +35,11 @@ class TemplateTest extends TestCase{
 	
 	public function testRender(){
 		
-		$this->assertEquals($this->testContent,Template::render($this->testSlug));
+		ob_start();Template::render($this->testSlug);$out = ob_get_contents();ob_end_clean();
+		
+		$this->assertEquals($this->testContent,$out);
 	
 	}
-	
-	public function testSection(){
-		
-		//Make section
-		
-		Template::start();?>ok<?php $content = Template::end();
-		
-		$this->assertEquals($this->testContent,$content);
-	
-	}
-	
-	public function testExtend(){
-		
-		//Make section
-		
-		Template::start();?>ok<?php $content = Template::extend($this->testSlug);
-		
-		$this->assertEquals($this->testContent.'ok',$content);
-	
-	}
+
 }
 ?>

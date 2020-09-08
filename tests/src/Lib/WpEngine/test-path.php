@@ -20,13 +20,13 @@ class PathTest extends TestCase{
 	
 	public function testGetUrl1(){
 		
-		$this->assertEquals('/wp-content/plugins/inpsyde/src/Assets/css/main.css',Path::getUrl('Plugin:Inpsyde/Assets/css/main.css'));
+		$this->assertEquals('/wp-content/plugins/inpsyde/src/Assets/css/main.css',Path::url('Plugin:Inpsyde/Assets/css/main.css'));
 	
 	}
 	
 	public function testGetUrl2(){
 		
-		$this->assertEquals('/wp-content/themes/inpsyde/src/Assets/css/main.css',Path::getUrl('Theme:Inpsyde/Assets/css/main.css'));
+		$this->assertEquals('/wp-content/themes/inpsyde/src/Assets/css/main.css',Path::url('Theme:Inpsyde/Assets/css/main.css'));
 	
 	}
 }
