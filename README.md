@@ -220,7 +220,7 @@ Please see below:
 
 # Abouts
 As final consideration please note that this plugin development and architecture was built without recurring to any external plugins or libs, i do understand that, likely, yourlseves will use libraries or components that can speed development time wihtout the need to be "re-creating the wheel" on every plugin developed. 
-In adition i also realise that some of the wordpress plugins follow their own wordpress plugin architecture and that PHPCS implements strict code standards to make sure plugins comply with the company rules, so in future i have absolutely no problem of developing a plugin that follows whatever patterns / architecture yourselves find fit.
+In adition i also realize that some of the plugins follow their own wordpress plugin architecture and that PHPCS implements strict code standards to make sure plugins comply with the company rules, so in future i have absolutely no problem of developing a plugin that follows whatever patterns / architecture yourselves find fit.
 
 Should the evaluator have any questions about this plugin or any information contained in this document please feel free to contact me via email to info@joao-vieira.pt or via skype JCV.pt. Thank you.
 
